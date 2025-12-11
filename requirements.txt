@@ -1,0 +1,9 @@
+pandas
+scipy
+outliers
+numpy
+streamlit
+matplotlib
+plotly
+xhtml2pdf
+kaleido
