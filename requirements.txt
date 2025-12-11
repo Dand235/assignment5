@@ -1,9 +1,8 @@
-pandas
-scipy
-outliers
-numpy
-streamlit
-matplotlib
-plotly
-xhtml2pdf
-kaleido
+streamlit==1.38.0
+pandas==2.2.3
+numpy==2.1.2
+plotly==5.24.1
+scipy==1.14.1
+outliers==0.0.4
+xhtml2pdf==0.2.16
+pisa==4.1.0
