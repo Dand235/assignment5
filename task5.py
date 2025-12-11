@@ -1,12 +1,8 @@
 import pandas
-from scipy.stats import zscore
 from outliers import smirnov_grubbs as grubbs
 import numpy as np
 import streamlit as st
-import matplotlib.pyplot as plt
-import time
 import plotly.graph_objects as go
-import plotly.express as px
 import base64
 from io import BytesIO
 from xhtml2pdf import pisa
@@ -288,4 +284,5 @@ with col_btn2:
             mime="application/pdf"
         )
     else:
+
         st.error("PDF generation failed")
