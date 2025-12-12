@@ -162,14 +162,14 @@ for tab in tabs:
             outliers_moving_avg = round(outliers_moving_avg, 3)
             date_mov_avg = pandas.merge(dates, outliers_moving_avg, left_index=True, right_index=True, how='inner')
             st.write(date_mov_avg)
-
+        date_grubbs = pandas.merge(dates, outlier_grubbs, left_index=True, right_index=True, how='inner')
         with col10:
             st.write("Grubbs outliers:")
             if (outlier_grubbs.empty):
                 st.write("No grubbs outliers")
             else:
                 outlier_grubbs = round(outlier_grubbs, 3)
-                date_grubbs = pandas.merge(dates, outlier_grubbs, left_index=True, right_index=True, how='inner')
+                #date_grubbs = pandas.merge(dates, outlier_grubbs, left_index=True, right_index=True, how='inner')
                 st.write(date_grubbs)
         all_outliers = pandas.concat([date_z, date_grubbs, date_mov_avg, date_iqr], axis=0).drop_duplicates()
         st.subheader("All outliers")
@@ -286,3 +286,4 @@ with col_btn2:
     else:
 
         st.error("PDF generation failed")
+
